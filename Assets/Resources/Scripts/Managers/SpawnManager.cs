@@ -31,7 +31,7 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator SpawnPowerupRoutine()
     {
-        while (GameManager.Instance.IsGameOver)
+        while (!GameManager.Instance.IsGameOver)
         {
             SpawnPowerup();
             yield return new WaitForSeconds(spawnInterval);
